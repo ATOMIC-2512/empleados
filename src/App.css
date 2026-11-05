@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.message {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Grid de tarjetas: 1 columna en móvil */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-name {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.card-info {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+  overflow-wrap: anywhere;
+}
+
+.card-company {
+  margin: 12px 0 0;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Escritorio: 3 columnas */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
